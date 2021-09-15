@@ -12,5 +12,5 @@ export type MigrationHandler = (
 
 export interface InitialConfig {
    db: FirebaseFirestore.Firestore
-   fieldValue: typeof firestore.FieldValue
+   fieldValue?: typeof firestore.FieldValue
 }

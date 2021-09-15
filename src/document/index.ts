@@ -45,7 +45,7 @@ export const fieldToField = (before: string, after: string): MigrationHandler =>
 }
 
 // Assigns a default accross
-export const assignDefault = (field: string, defaultValue: string): MigrationHandler => {
+export const assignDefault = <T>(field: string, defaultValue: T): MigrationHandler => {
   return (batch, entries, collection) => {
     ;(entries as Entries).forEach((entry) => {
       const ref = collection.doc(entry.id)

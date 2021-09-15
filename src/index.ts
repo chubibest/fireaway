@@ -21,7 +21,7 @@ export const getMigrationDataFromCollection = (
 
 export default ({db, fieldValue}: InitialConfig) => {
   const migration = async (
-    collection: string |Collection,
+    collection: string | Collection,
     migrationHandler: MigrationHandler
   ): Promise<void> => {
     console.log('Getting entries within collection...')
