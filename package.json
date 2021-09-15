@@ -1,0 +1,31 @@
+{
+  "name": "fireaway",
+  "version": "1.0.0",
+  "description": "Utility to make updates accross a firestore collection",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./build && tsc",
+    "tsc": "tsc",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chubibest/fireaway.git"
+  },
+  "keywords": [
+    "migration",
+    "firestore"
+  ],
+  "author": "Chubi Best",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chubibest/fireaway/issues"
+  },
+  "homepage": "https://github.com/chubibest/fireaway#readme",
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "firebase-admin": "^9.1.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6", "esnext"],
+    "allowJs": false,
+    "outDir": "build",
+    "rootDir": "src",
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+
+    "typeRoots": ["./types", "./node_modules/@types"],
+
+    // I did this for firebase
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "typings", "src/**/test/**/*.ts"]
+}
