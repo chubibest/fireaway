@@ -24,40 +24,65 @@ Utility for making changes accross an entire firestore collection.
 ### assignDefault
 Creates a new field accross an entire collection.
 
-  **Parameters**
+  *Parameters*
 
-  `field name {String}` Name of the field
+  `field name {String}` Name of the field.
 
-  `field value {String}` default value to assign
-
+  `field value {String | Number}` default value to assign
+  
 ### fieldToField
 Renames a field.
 
-   **Parameters**
+   *Parameters*
 
  `former name {String}` Former name
 
  `new name {String}` New name
+
 
 ### fieldToFieldOrDefault
 Renames an existing field or creates it if it is missing.
 
-   **Parameters**
+   *Parameters*
 
  `former name {String}` Former name
 
  `new name {String}` New name
 
- `default value {String}` Default value
-
+ `default value {String | Number}` Default value
+  
 ### removeAll
 Removes a field from all documents in a collection.
 
-  **Parameters**
-  `field name {String}` Name of field to remove
+  *Parameters*
 
+  `field name {String}` Name of field to remove
+  
 ### assignDefaultCollection
 Creates a sub-collection accross an entire collection.
-**Parameters**
+
+*Parameters*
+
 `value {Object}`  Document fields
+
 `sub collection name {String}` Name fo subcollection
+  
+## Custom Handler
+Write your own handlers to carry out [batch](https://firebase.google.com/docs/firestore/manage-data/transactions#batched-writes) operations.
+
+```js
+function customHandler('argument(s) you will need'){
+  return (batch, entries, collection) => {
+    entries.forEach((entry) => {
+      const ref = collection.doc(entry.id)
+
+        // stuff you want to do accross all docs with args
+
+        batch.update(ref, { fieldYouWant: 'Value you derived' })
+      
+    })
+  }
+}
+
+migration('collectionName', customHandler('parameter(s) you need'))
+```

@@ -4,9 +4,11 @@
   "description": "Utility to make updates accross a firestore collection",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "files": ["build/**/*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./build && tsc",
+    "prepare" : "npm run build",
     "tsc": "tsc",
     "prepublish": "tsc"
   },
