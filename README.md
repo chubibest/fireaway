@@ -1,5 +1,5 @@
 ## Fireaway
-Utility for making changes accross an entire firestore collection.
+Utility for making changes across an entire Firestore collection.
 
 ```js
     import fireaway, { fieldToField } from 'fireaway'
