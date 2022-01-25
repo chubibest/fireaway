@@ -18,7 +18,9 @@
   },
   "keywords": [
     "migration",
-    "firestore"
+    "firestore",
+    "schema",
+    "typescript"
   ],
   "author": "Chubi Best",
   "license": "ISC",
